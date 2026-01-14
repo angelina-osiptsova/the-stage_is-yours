@@ -1,0 +1,81 @@
+:root {
+  --x-4i-oeas: rgba(251, 213, 128, 1);
+  --x-293-5hr: rgba(86, 0, 0, 1);
+  --bli-DVV: rgba(40, 0, 0, 1);
+  --xk-iv-OF: rgba(0, 23, 61, 1);
+  --x-3p-4u-2k: rgba(255, 255, 255, 1);
+  --bvw-9o-x: rgba(30, 30, 30, 1);
+  --POU-aad: rgba(245, 245, 245, 1);
+  --k-qb-7-2y: rgba(117, 117, 117, 1);
+  --title-hero-font-family: "Cy Grotesk", Helvetica;
+  --title-hero-font-weight: 400;
+  --title-hero-font-size: 76px;
+  --title-hero-letter-spacing: 1.52px;
+  --title-hero-line-height: normal;
+  --title-hero-font-style: normal;
+  --subtitle-font-family: "Cy Grotesk", Helvetica;
+  --subtitle-font-weight: 400;
+  --subtitle-font-size: 39px;
+  --subtitle-letter-spacing: 0px;
+  --subtitle-line-height: normal;
+  --subtitle-font-style: normal;
+  --heading-font-family: "Accia Flare", Helvetica;
+  --heading-font-weight: 300;
+  --heading-font-size: 39px;
+  --heading-letter-spacing: 0px;
+  --heading-line-height: normal;
+  --heading-font-style: normal;
+  --subheading-font-family: "Accia Flare", Helvetica;
+  --subheading-font-weight: 300;
+  --subheading-font-size: 31px;
+  --subheading-letter-spacing: 0px;
+  --subheading-line-height: normal;
+  --subheading-font-style: normal;
+  --body-font-family: "Accia Flare", Helvetica;
+  --body-font-weight: 300;
+  --body-font-size: 20px;
+  --body-letter-spacing: 0px;
+  --body-line-height: normal;
+  --body-font-style: normal;
+  --button-font-family: "Accia Flare", Helvetica;
+  --button-font-weight: 300;
+  --button-font-size: 16px;
+  --button-letter-spacing: 0px;
+  --button-line-height: normal;
+  --button-font-style: normal;
+  --title-page-font-family: "Cy Grotesk", Helvetica;
+  --title-page-font-weight: 400;
+  --title-page-font-size: 49px;
+  --title-page-letter-spacing: 0.49px;
+  --title-page-line-height: normal;
+  --title-page-font-style: normal;
+  --variable-collection: 120px;
+  --variable-collection-color: var(--color-background-default-default);
+  --color-background-default-default: var(--color-primitives-white-1000);
+  --color-primitives-white-1000: rgba(255, 255, 255, 1);
+  --color-primitives-gray-900: rgba(30, 30, 30, 1);
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-color-mode="SDS-light">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-color-mode="SDS-light"] {
+  --color-background-default-default: var(--color-primitives-white-1000);
+}
+
+[data-color-mode="SDS-dark"] {
+  --color-background-default-default: var(--color-primitives-gray-900);
+}
+
+[data-color-mode="brand-b-light"] {
+  --color-background-default-default: var(--color-primitives-white-1000);
+}
