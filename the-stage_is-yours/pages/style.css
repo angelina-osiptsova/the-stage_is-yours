@@ -228,6 +228,144 @@
     z-index: 5;
 }
 
+/* ===== SECTION 3 ===== */
+.section3 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.curtains {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 3;
+}
+
+.curtain {
+    width: 50%;
+    background: repeating-linear-gradient(90deg,
+            #9b0000,
+            #9b0000 24px,
+            #7a0000 24px,
+            #7a0000 48px);
+    transition: transform 1.3s cubic-bezier(.77, 0, .18, 1);
+}
+
+.game-intro,
+.game-content,
+.task {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.curtain.left {
+    transform: translateX(0);
+}
+
+.curtain.right {
+    transform: translateX(0);
+}
+
+.section3.open .curtain.left {
+    transform: translateX(-100%);
+}
+
+.section3.open .curtain.right {
+    transform: translateX(100%);
+}
+
+.game-intro {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.game-intro h2 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 32px;
+}
+
+.game-intro button,
+.pick-card {
+    padding: 16px 48px;
+    border-radius: 14px;
+    border: none;
+    background: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background .3s, transform .3s;
+}
+
+.game-intro button:hover,
+.pick-card:hover {
+    background: #ffe2a6;
+    transform: translateY(-3px);
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.game-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+}
+
+.cards img {
+    width: 180px;
+    transform: rotate(-10deg);
+}
+
+.cards img:nth-child(2) {
+    transform: rotate(0);
+}
+
+.cards img:nth-child(3) {
+    transform: rotate(10deg);
+}
+
+.task {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-header {
+    margin-top: 40px;
+    display: flex;
+    gap: 60px;
+    font-size: 18px;
+}
+
+.task-card {
+    margin-top: 60px;
+    width: 280px;
+}
+
 @keyframes lightMove {
 
     0%,

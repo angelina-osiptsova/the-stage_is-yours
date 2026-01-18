@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сцена твоя!</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./js/script.js" defer></script>
 </head>
 
 <header class="site-header">
@@ -53,6 +54,47 @@
 
             <div class="fade"></div>
         </div>
+    </section>
+
+    <section class="section3" id="gameSection">
+
+        <!-- СЦЕНА (ВСЕГДА ВИДИМА) -->
+        <div class="stage-bg"></div>
+
+        <!-- ШТОРЫ -->
+        <div class="curtains">
+            <div class="curtain left"></div>
+            <div class="curtain right"></div>
+        </div>
+
+        <!-- ВСТУП -->
+        <div class="game-intro" id="intro">
+            <h2>Готові випробувати себе?</h2>
+            <button id="playBtn">Грати</button>
+        </div>
+
+        <!-- ВЫБОР КАРТЫ -->
+        <div class="game-content hidden" id="gameContent">
+            <button class="pick-card" id="pickCard">Вибрати карту</button>
+
+            <div class="cards">
+                <img alt="" src="../assets/card-back.png">
+                <img alt="" src="../assets/card-back.png">
+                <img alt="" src="../assets/card-back.png">
+            </div>
+        </div>
+
+        <!-- ЗАДАНИЕ -->
+        <div class="task hidden" id="task">
+            <div class="task-header">
+                <span class="done">Виконано</span>
+                <span class="counter">0 / 3</span>
+                <span class="fail">Не виконано</span>
+            </div>
+
+            <img alt="" src="../assets/task-card.png" class="task-card">
+        </div>
+
     </section>
 
 </body>
