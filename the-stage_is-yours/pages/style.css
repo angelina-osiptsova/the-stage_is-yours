@@ -227,8 +227,6 @@
             rgba(0, 0, 0, 0));
     z-index: 5;
 }
-
-/* ===== SECTION 3 ===== */
 .section3 {
     position: relative;
     height: 100vh;
@@ -261,11 +259,11 @@
 }
 
 .curtain.left {
-    transform: translateX(0);
+    transition: transform 0.5s ease, opacity 0.1s linear;
 }
 
 .curtain.right {
-    transform: translateX(0);
+    transition: transform 0.5s ease, opacity 0.1s linear;
 }
 
 .section3.open .curtain.left {
@@ -293,8 +291,7 @@
     margin-bottom: 32px;
 }
 
-.game-intro button,
-.pick-card {
+.game-intro button {
     padding: 16px 48px;
     border-radius: 14px;
     border: none;
@@ -303,9 +300,15 @@
     cursor: pointer;
     transition: background .3s, transform .3s;
 }
-
-.game-intro button:hover,
+.game-content .pick-card {
+    background-color: #560000;
+}
 .pick-card:hover {
+    background: #ffe2a6;
+    transform: translateY(-3px);
+}
+.game-intro button:hover
+{
     background: #ffe2a6;
     transform: translateY(-3px);
 }
@@ -324,8 +327,14 @@
     align-items: center;
     justify-content: center;
     gap: 60px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s ease;
 }
-
+.game-content.show {
+    opacity: 1;
+    pointer-events: auto;
+}
 .cards {
     display: flex;
     gap: 30px;

@@ -4,6 +4,8 @@ const intro = document.getElementById("intro");
 const gameContent = document.getElementById("gameContent");
 const pickCard = document.getElementById("pickCard");
 const task = document.getElementById("task");
+const cur = document.getElementsByClassName("curtains")[0];
+
 
 playBtn.onclick = () => {
     intro.style.opacity = 0;
@@ -14,8 +16,12 @@ playBtn.onclick = () => {
     }, 300);
 
     setTimeout(() => {
-        gameContent.classList.remove("hidden");
-    }, 1200);
+        gameContent.classList.add('show');
+    }, 1300);
+    setTimeout(() => {
+        cur.remove();
+    }, 500);
+    intro.remove();
 };
 
 pickCard.onclick = () => {
