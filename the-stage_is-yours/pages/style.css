@@ -98,6 +98,7 @@
 .hero {
     position: relative;
     height: 966px;
+    width: 100vw;
     background: url("assets/stage.jpg") center / cover no-repeat;
     overflow: hidden;
 }
@@ -112,19 +113,17 @@
 
 .spotlight {
     position: absolute;
-    width: 50vw;
     height: 966px;
     z-index: 2;
     overflow-x: visible;
 }
 
 .spotlight.left {
-    left: 0%;
-    animation-delay: 2s;
+    left: 0;
 }
 
 .spotlight.right {
-    right: 0%;
+    right: 0;
 }
 .hero-content {
     position: relative;
