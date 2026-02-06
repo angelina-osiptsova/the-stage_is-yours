@@ -605,6 +605,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .accordion-header {
@@ -619,6 +620,7 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
     transform: translateY(0);
+    overflow: hidden;
 }
 
 .header-title {
@@ -637,6 +639,7 @@
     display: none;
     opacity: 0;
     transform: translateY(10px);
+    overflow: hidden;
 }
 
 .accordion-item.active .accordion-header {
