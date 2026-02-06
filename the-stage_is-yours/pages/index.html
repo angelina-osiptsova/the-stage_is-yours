@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сцена твоя!</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<header class="site-header">
+    <nav class="nav">
+        <div class="nav-left">
+            <a onclick="return openSection(this)" href="#" class="accia">Про проєкт</a>
+            <a onclick="return openSection(this)" href="#" class="accia">Грати</a>
+            <a onclick="return openSection(this)" href="#" class="accia">Розвиток</a>
+            <a onclick="return openSection(this)" href="#" class="accia">Підтримка</a>
+        </div>
+        <div class="nav-right">
+            <span class="brand-text grotesk">Сцена твоя!</span>
+            <img alt="logo" src="assets/logo.png" class="logo">
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <section class="hero">
+        <div class="spotlight left">
+            <img src="assets/spotlight-left.png" alt="">
+        </div>
+        <div class="spotlight right">
+            <img src="assets/spotlight-right.png" alt="">
+        </div>
+        <div class="hero-content">
+            <h1 class="grotesk">СЦЕНА ТВОЯ!</h1>
+            <p class="accia">Твій новий акт впевненості</p>
+            <p class="accia">Свіжий погляд на публічні виступи</p>
+            <button id="start" onclick="return openSection(this)">Зануритися у гру</button>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="scene">
+
+            <div class="top-light">
+                <img src="assets/spotlight.png" alt="">
+            </div>
+            <div class="floor">
+                <img src="assets/desc.png" alt="">
+            </div>
+
+            <div class="section2-content">
+                <h2 class="grotesk">Сцена твоя</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section3" id="gameSection">
+        <div class="stage-bg"></div>
+        <div class="curtains">
+            <div class="curtain left"></div>
+            <div class="curtain right"></div>
+        </div>
+        <div class="game-intro" id="intro">
+            <h2 class="grotesk">Готовий вийти на сцену?</h2> <button id="playBtn" class="accia">Грати</button>
+        </div>
+        <div class="game-content hidden" id="gameContent"> 
+            <button id="pick-card" class="pick-card accia">Вибрати карту</button> 
+            <img id="card" src="" alt="card">
+            <div class="cards"> 
+                <img alt="" src="assets/card-back.png"> 
+            </div>
+        </div>
+        <div class="task hidden" id="task">
+            <div class="task-header"> 
+                <button class="done">Виконано</button> 
+                <div class="token">
+                    <img src="assets/token.png" id="token">
+                    <div class="token-info">
+                        <span class="grotesk" id="token-count">0</span>
+                        <p>кількість жетонів</p>
+                    </div>
+                </div>
+                <button class="fail">Не виконано</button> 
+            </div> 
+            <div class="task-footer">
+                <span class="counter">0 / 42</span> 
+            </div>
+        </div>
+        <div class="end-screen hidden" id="endScreen">
+            <div id="goodEnd">
+                <h2 class="grotesk">Ти - Зірка сцени!</h2>
+                <p class="accia">Ти вже тримаєш сцену й привертаєш увагу. Гра допоможе вийти на максимум!</p>
+            </div>
+            <div id="badEnd">
+                <h2 class="grotesk">Ти на правильному шляху!</h2>
+                <p class="accia">Ти вже на сцені — час додати впевненості! Твої навички хороші, їх можна прокачати більше.</p>
+            </div>
+            <button class="support-btn accia" onclick="return openSection(this)">Підтримати проект</button>
+        </div>
+    </section>
+
+
+    <section class="section4">
+        <div class="main-section">
+            <h1 class="main-title grotesk">Допоможіть нам покращитися!</h1>
+
+            <div class="film-strip-container">
+                <div class="holes-column">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+
+                <div class="white-paper-area">
+
+                    <div class="accordion-item" id="feedbackSection">
+                        <div class="accordion-header" onclick="toggleSection('feedbackSection')">
+                            <span class="header-title grotesk">Поділися своїми враженнями!</span>
+                            <span class="header-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="feedback-card">
+                                <div class="feedback-header">
+                                    <h2 class="grotesk">Поділися своїми враженнями!</h2>
+                                    <div class="minimize-icon" onclick="toggleSection('feedbackSection')"></div>
+                                </div>
+                                <form id="feedbackForm">
+                                    <div class="input-group">
+                                        <input class="accia" type="text" name="name" placeholder="Твоє ім'я"
+                                            autocomplete="off">
+                                    </div>
+                                    <div class="input-group">
+                                        <textarea class="accia" name="message"
+                                            placeholder="Твої враження\ідеї\пропозиції"></textarea>
+                                    </div>
+                                    <div class="btn-container">
+                                        <button type="submit" class="submit-btn accia">Надіслати</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item active" id="interviewSection">
+                        <div class="accordion-header" onclick="toggleSection('interviewSection')">
+                            <span class="header-title grotesk">Стань частиною створення шоу!</span>
+                            <span class="header-icon">+</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="feedback-card">
+                                <div class="feedback-header">
+                                    <h2 class="grotesk">Стань частиною створення шоу!</h2>
+                                    <div class="minimize-icon" onclick="toggleSection('interviewSection')"></div>
+                                </div>
+                                <form id="interviewForm">
+                                    <div class="grid-inputs">
+                                        <input class="accia" type="text" placeholder="Твоє ім'я" style="width: 155px;">
+                                        <input class="accia" type="text" placeholder="Номер телефону"
+                                            style="width: 341px;">
+                                        <input class="accia" type="text" placeholder="Електронна скринька"
+                                            style="width: 399px;">
+                                        <input class="accia" type="text" placeholder="Юзернейм в Telegram"
+                                            style="width: 399px;">
+                                    </div>
+                                    <div class="btn-container">
+                                        <button type="submit" class="submit-btn accia">Надіслати</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="holes-column">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-section">
+        <div class="support-container">
+            <div class="support-info">
+                <h2 class="support-title grotesk">Підтримка</h2>
+                <p class="support-description accia">
+                    Якщо тобі близька наша ідея, підтримай “Сцену твою!” та перший тираж.
+                </p>
+            </div>
+
+            <div class="ticket-container">
+                <div class="ticket-card back-ticket"></div>
+                <div class="ticket-card front-ticket">
+                    <div class="ticket-edge left accia">0000000</div>
+                    <div class="ticket-main">
+                        <span class="ticket-label accia">Запуск</span>
+                        <span class="ticket-name accia">“Сцена Твоя!”</span>
+                        <button class="ticket-btn accia">Підтримати</button>
+                    </div>
+                    <div class="ticket-edge right accia">0000000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2 class="footer-logo grotesk">Сцена твоя!</h2>
+            <p class="footer-tagline accia">Інший погляд на публічність</p>
+            <div class="footer-socials">
+                <a href="#"><img src="assets/LinkedIn.png" alt="LinkedIn"></a>
+                <a href="#"><img src="assets/Facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/thestage_isyours" target="_blank"><img src="assets/Instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/Gmail.png" alt="Gmail"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
