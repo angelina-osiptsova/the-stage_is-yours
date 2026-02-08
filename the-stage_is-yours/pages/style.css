@@ -58,6 +58,7 @@
     font-weight: 300;
     font-size: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 .nav-left a::after {
