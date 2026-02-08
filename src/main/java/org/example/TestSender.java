@@ -1,6 +1,6 @@
 package org.example;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -12,7 +12,7 @@ public class TestSender {
         this.emailService = emailService;
     }
 
-    @GetMapping("/send-test-mail")
+    @PostMapping("/send-test-mail")
     public String sendMail() {
         emailService.sendEmail(
                 "olxsamr.06g@gmail.com",
